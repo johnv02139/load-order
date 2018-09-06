@@ -7,23 +7,18 @@
 
 ;; generic utilities
 
-(def pwd (System/getProperty "user.dir"))
+(def ^:private pwd (System/getProperty "user.dir"))
 
-(defn get-path
+(defn- get-path
   "Creates a Path using the segments provided."
   [x & more]
   (let [more-array (into-array String more)]
     (Paths/get x more-array)))
 
-(defn relativize
-  "Get the relative path from root to leaf."
-  [root-path leaf-path]
-  (and root-path leaf-path
-       (.relativize root-path leaf-path)))
 
 ;; data
 
-(def cwd
+(def ^:private cwd
   "The JVM's user dir, as a Path object."
   (get-path pwd))
 

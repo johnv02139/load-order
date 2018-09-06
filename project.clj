@@ -1,4 +1,4 @@
-(defproject load-order "0.0.3-SNAPSHOT"
+(defproject load-order "0.0.4-SNAPSHOT"
   :description "See the order in which your source files are loaded by Clojure."
   :url "https://github.com/johnv02139/load-order"
   :license {:name "Eclipse Public License"
